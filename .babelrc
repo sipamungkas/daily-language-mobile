@@ -1,0 +1,37 @@
+{
+  "presets": ["module:metro-react-native-babel-preset"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["."], //  This says the root of your project folder
+        // To make your imports look better
+        // Insert your whatever name to make alias for the imports
+        // In this example I'm using @components to referring the components folder
+        // That located inside src folder.
+        // Note: You can make a lot of aliases in here
+        "alias": {
+          "@": "./src",
+          "@assets": "./src/assets",
+          "@components": "./src/components",
+          "@constants": "./src/constants",
+          "@helpers": "./src/helpers",
+          "@navigators": "./src/navigators",
+          "@screens": "./src/screens",
+          "@types": "./src/types",
+          "@utils": "src/utils"
+        }
+      }
+    ],
+    ["@babel/plugin-transform-export-namespace-from"],
+    [
+      "module:react-native-dotenv",
+      {
+        "envName": "APP_ENV",
+        "moduleName": "@env",
+        "path": ".env",
+        "allowUndefined": false
+      }
+    ]
+  ]
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Daily Language</string>
+    <string name="daily_language_notification" translatable="false">daily_language_notification</string>
+</resources>
